@@ -4,13 +4,22 @@ body {
   font-family: sans-serif;
 }
 
-.card {
-  width: 700px;
-  height: 700px;
-  border: 1px solid red;
+.pvList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.imgContainer {
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 20px;
+}
+
+.imgCt {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -21,7 +30,7 @@ body {
   background-color:black;
 }
 
-.imgContainer img {
+.imgCt img {
   height: 100%;
   z-index: 200;
 }
@@ -36,7 +45,7 @@ body {
   z-index: 500;
 }
 
-.tooltipContainer {
+.tooltipCt {
   position: absolute;
   width: 100%;
   z-index: 300;
