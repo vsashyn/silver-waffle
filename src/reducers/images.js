@@ -24,11 +24,11 @@ const initialState = [
 function images(state = initialState, action) {
   switch (action.type) {
     case ADD_IMG:
-      return [{
+      return [...state, {
         id: genId(),
         src: action.payload.src,
         tooltip: '',
-      }, ...state,
+      },
       ];
 
     case DELETE_IMG:

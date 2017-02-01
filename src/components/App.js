@@ -5,13 +5,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ul>
-          <li><Link to="/edit">Edit</Link></li>
+        <ul className="nav">
+          <li><Link to="/edit">Edit mode</Link></li>
           <li><Link to="/preview">Preview</Link></li>
         </ul>
         {this.props.children}
       </div>
-
     );
   }
 }
