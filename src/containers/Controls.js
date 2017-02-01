@@ -11,10 +11,6 @@ function ControlsCmp(props) {
         accept="image/*"
         onChange={props.onUploadClick}
       />
-
-      <button>
-        Preview
-      </button>
     </div>
   );
 }
