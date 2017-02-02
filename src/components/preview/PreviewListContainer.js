@@ -5,16 +5,5 @@ const mapStateToProps = state => ({
   images: state.images,
 });
 
-
-const mapDispatchToProps = dispatch => ({
-  // onRemoveImg: (id) => {
-  //   dispatch(actionCreators.deleteImg({ id }));
-  // },
-  // onSaveTooltip: ({ id, text }) => {
-  //   dispatch(actionCreators.setTooltip({ id, text }));
-  // },
-});
-
-
-const PreviewListContainer = connect(mapStateToProps, mapDispatchToProps)(PreviewListView);
+const PreviewListContainer = connect(mapStateToProps)(PreviewListView);
 export default PreviewListContainer;

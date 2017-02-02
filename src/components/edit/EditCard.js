@@ -14,9 +14,8 @@ class EditCard extends React.Component {
     this.handleRemoveImg = this.handleRemoveImg.bind(this);
   }
 
-  onHandleTooltipAreaChange(value) {
-    this.setState({ tooltip: value });
-    console.log('internal state change', this.state);
+  onHandleTooltipAreaChange(event) {
+    this.setState({ tooltip: event.target.value });
   }
 
   handleSaveTooltip() {

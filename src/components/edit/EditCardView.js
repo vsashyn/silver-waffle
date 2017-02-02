@@ -17,16 +17,12 @@ const EditCardView = props => (
         className="tooltipArea"
         placeholder="Add tooltip"
         value={props.tooltip}
-        onChange={function (event) {
-          props.onHandleTooltipAreaChange(event.target.value);
-        }}
+        onChange={props.onHandleTooltipAreaChange}
       />
       <br />
       <button
         type="button"
-        onClick={function () {
-          props.onSaveTooltip();
-        }}
+        onClick={props.onSaveTooltip}
       >Save tooltip
       </button>
     </span>
@@ -44,12 +40,15 @@ EditCardView.propTypes = {
   tooltip: React.PropTypes.string,
   onSaveTooltip: React.PropTypes.func,
   onRemoveImg: React.PropTypes.func,
+  onHandleTooltipAreaChange: React.PropTypes.func,
 };
+
 EditCardView.defaultProps = {
   imgSrc: '',
   tooltip: '',
   onSaveTooltip: () => {},
   onRemoveImg: () => {},
+  onHandleTooltipAreaChange: () => {},
 };
 
 export default EditCardView;

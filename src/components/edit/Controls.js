@@ -5,8 +5,8 @@ import { readImgAsURL } from '../../actions';
 function ControlsCmp(props) {
   return (
     <div
-        className="uploadCt">
-      {/* Add img */}
+      className="uploadCt"
+    >
       <input
         className="uploadIn"
         id="inputImg"
@@ -18,7 +18,7 @@ function ControlsCmp(props) {
       <label
         className="uploadLbl"
         htmlFor="inputImg"
-        >Upload image</label>
+      >Upload image</label>
     </div>
   );
 }
