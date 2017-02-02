@@ -6,8 +6,8 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import imgApp from './reducers';
 import App from './components/App';
-import Edit from './components/Edit';
-import Preview from './components/Preview';
+import Edit from './components/edit/Edit';
+import Preview from './components/preview/Preview';
 import './index.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

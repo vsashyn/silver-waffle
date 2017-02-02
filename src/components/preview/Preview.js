@@ -1,5 +1,5 @@
 import React from 'react';
-import PreviewListContainer from '../containers/preview/PreviewListContainer';
+import PreviewListContainer from './PreviewListContainer';
 
 
 export default function Preview(props) {

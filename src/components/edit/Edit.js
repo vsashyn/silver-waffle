@@ -1,6 +1,6 @@
 import React from 'react';
-import Controls from '../containers/edit/Controls';
-import EditListContainer from '../containers/edit/EditListContainer';
+import Controls from './Controls';
+import EditListContainer from './EditListContainer';
 
 export default function Edit() {
   return (
