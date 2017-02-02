@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import { createStore, compose, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import promiseMiddleware from 'redux-promise-middleware';
 import imgApp from './reducers';
 import App from './components/App';
 import Edit from './components/edit/Edit';
@@ -12,7 +13,11 @@ import './index.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(imgApp, {}, composeEnhancers(applyMiddleware(ReduxThunk)));
+// const store = createStore(imgApp, {}, composeEnhancers(applyMiddleware(ReduxThunk)));
+
+// STUB  - add promise Middleware
+const store = createStore(imgApp, {},
+composeEnhancers(applyMiddleware(ReduxThunk, promiseMiddleware())));
 
 ReactDOM.render(
   <Provider store={store}>
