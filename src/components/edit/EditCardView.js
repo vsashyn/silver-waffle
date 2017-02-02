@@ -12,26 +12,30 @@ const EditCardView = props => (
         alt=""
       />
     </div>
-    <span>
-      <textarea
-        className="tooltipArea"
-        placeholder="Add tooltip"
-        value={props.tooltip}
-        onChange={props.onHandleTooltipAreaChange}
-      />
-      <br />
+    <textarea
+      className="tooltipArea"
+      placeholder="Add tooltip"
+      value={props.tooltip}
+      onChange={props.onHandleTooltipAreaChange}
+    />
+    <br />
+    <div
+      className="editBtnCt"
+    >
       <button
         type="button"
+        className="myBtn"
         onClick={props.onSaveTooltip}
       >Save tooltip
-      </button>
-    </span>
-
-    <button
-      type="button"
-      onClick={props.onRemoveImg}
-    >Remove image
     </button>
+
+      <button
+        type="button"
+        className="myBtn"
+        onClick={props.onRemoveImg}
+      >Remove image
+    </button>
+    </div>
   </div>
   );
 

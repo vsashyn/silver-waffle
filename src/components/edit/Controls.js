@@ -16,7 +16,7 @@ function ControlsCmp(props) {
         onChange={props.onUploadClick}
       />
       <label
-        className="uploadLbl"
+        className="myBtn"
         htmlFor="inputImg"
       >Upload image</label>
     </div>
