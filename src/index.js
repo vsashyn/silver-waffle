@@ -12,10 +12,6 @@ import Preview from './components/preview/Preview';
 import './index.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-// const store = createStore(imgApp, {}, composeEnhancers(applyMiddleware(ReduxThunk)));
-
-// STUB  - add promise Middleware
 const store = createStore(imgApp, {},
 composeEnhancers(applyMiddleware(ReduxThunk, promiseMiddleware())));
 
