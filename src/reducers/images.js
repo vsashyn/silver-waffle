@@ -10,12 +10,12 @@ function genId() {
 const initialState = [
   {
     id: genId(),
-    src: 'https://c1.staticflickr.com/4/3041/2750903492_fe8f56943f_n.jpg',
+    src: 'https://c1.staticflickr.com/4/3771/13238553944_1c6c241732_b.jpg',
     tooltip: 'Highlighted tooltip',
   },
   {
     id: genId(),
-    src: 'https://c1.staticflickr.com/4/3041/2750903492_fe8f56943f_n.jpg',
+    src: 'https://c1.staticflickr.com/6/5534/12026256495_3bbf270693.jpg',
     tooltip: '',
   },
 ];
