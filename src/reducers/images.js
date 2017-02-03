@@ -1,33 +1,21 @@
-import { ADD_IMG, DELETE_IMG, SET_TOOLTIP } from '../actions/index';
+import { LOAD_IMAGES, ADD_IMG, DELETE_IMG, SET_TOOLTIP } from '../actions/index';
 
-let inc = 0;
+const defaultState = [];
 
-function genId() {
-  inc += 1;
-  return inc;
-}
-
-const initialState = [
-  {
-    id: genId(),
-    src: 'https://c1.staticflickr.com/4/3771/13238553944_1c6c241732_b.jpg',
-    tooltip: 'Highlighted tooltip',
-  },
-  {
-    id: genId(),
-    src: 'https://c1.staticflickr.com/6/5534/12026256495_3bbf270693.jpg',
-    tooltip: '',
-  },
-];
-
-
-function images(state = initialState, action) {
+function images(state = defaultState, action) {
   switch (action.type) {
+
+    case `${LOAD_IMAGES}_FULFILLED`:
+      return action.payload.images.map(img => Object.assign({}, {
+        id: img.id,
+        src: img.src,
+        tooltip: img.tooltip,
+      }));
 
     case `${ADD_IMG}_FULFILLED`:
       return [...state,
         {
-          id: genId(),
+          id: action.payload.id,
           src: action.payload.src,
           tooltip: '',
         },

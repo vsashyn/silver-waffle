@@ -1,8 +1,14 @@
+import initialState, { genId } from './InitState';
+
 export const ADD_IMG = 'ADD_IMG';
 export const DELETE_IMG = 'DELETE_IMG';
 export const SET_TOOLTIP = 'SET_TOOLTIP';
+export const LOAD_IMAGES = 'LOAD_IMAGES';
 
-// STUBS for async
+
+// Real-world async actions with server requests,
+// which can be used in real-world application
+
 /*
 function addImgReq({ src }) {
   return fetch('images/', {
@@ -21,12 +27,33 @@ function setTooltipReq({ id, text }) {
     body: JSON.stringify({ tooltip: text }),
   });
 }
+function loadImagesReq() {
+  return fetch('images/', {
+    method: 'GET',
+  })
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    }
+  })
+.catch((err) => {
+  throw err;
+});
+}
 */
+
+export function loadImages() {
+  return {
+    type: LOAD_IMAGES,
+    payload: Promise.resolve({ images: initialState }),
+  };
+}
 
 export function addImg({ src }) {
   return {
     type: ADD_IMG,
-    payload: Promise.resolve({ src }),
+    payload: Promise.resolve({ src,
+      id: genId() }),
   };
 }
 
